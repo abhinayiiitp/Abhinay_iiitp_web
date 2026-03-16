@@ -52,17 +52,21 @@ const SectionTitle = ({ children, className }: { children: React.ReactNode, clas
 
 import { TeamMember } from '@/hooks/useTeam';
 
-const TeamCategory = ({ title, members }: { title: string, members: TeamMember[] }) => (
-  <div className="mb-12">
-    <h3 className="text-2xl font-headline font-bold tracking-tighter sm:text-3xl text-center mb-8">{title}</h3>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
-      {members.map((member) => (
-        <div key={member.id} className="rounded-lg shadow-lg flex flex-col items-center justify-center p-4 bg-white">
-          <h3 className="font-headline text-xl font-bold text-primary mb-2">{member.name}</h3>
-          <p className="text-sm text-primary mb-2">{member.role}</p>
-          <p className="text-xs text-gray-700 line-clamp-4">{member.bio}</p>
-        </div>
-      ))}
+const TeamSection = () => (
+  <div className="flex flex-col items-center justify-center">
+    <div className="mb-8 text-center">
+      <h3 className="text-2xl font-headline font-bold tracking-tighter sm:text-3xl mb-2">Acting Head</h3>
+    </div>
+    <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-2xl border-4 border-primary/20 bg-white group transition-all duration-500 hover:shadow-primary/20">
+      <div className="aspect-square relative">
+        <Image
+          src="/team/abhishek.jpg"
+          alt="Acting Head"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          priority
+        />
+      </div>
     </div>
   </div>
 );
@@ -191,28 +195,7 @@ export default function Home() {
               <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
           ) : (
-            teamCategories.map(category => {
-              // Standard logic: Filter by exact category
-              let members = team.filter(member => member.category === category);
-
-              // Special logic: 'Member' category should include EVERYONE (duplicates visual, single source truth)
-              // But sorting 'Member' role to the end if desired, or just show all.
-              // As per request: "any faculy advisor office bearer or vertical heads are directly members no need to re enter them just display them again"
-              if (category === 'Member') {
-                members = team; // Show everyone in the 'Member' section
-                // Optional: You might want to sort them so "Members" come last or by name
-              }
-
-              if (members.length === 0) return null;
-
-              return (
-                <TeamCategory
-                  key={category}
-                  title={category}
-                  members={members}
-                />
-              );
-            })
+            <TeamSection />
           )}
         </Section>
 
