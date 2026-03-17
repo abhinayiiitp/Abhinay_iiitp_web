@@ -122,7 +122,7 @@ export default function Home() {
               </h1>
               <h1 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">IIIT Pune.</h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
-                The official Acting Society of IIIT Pune, Where<br /> chaos meets creativity and fun meets family <br /> दोस्त, जो दिल में उतर जाए उसे अदाकारी कहते हैं !<br /> Theatre • Acting • Writing • Screen
+                The Official Theatre Society of IIIT Pune, Where<br /> chaos meets creativity and fun meets family <br /> दोस्त, जो दिल में उतर जाए उसे अदाकारी कहते हैं !<br /> Theatre • Acting • Writing • Screen
               </p>
               <div className="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start">
                 <Button asChild size="lg">
