@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
             <div className="flex flex-col justify-center space-y-4 text-center lg:text-left animate-fade-in-down">
               <h1 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to <br /><span className=" text-purple-200 text-primary animate-glow-blue "> A B H I N A Y </span><br/>
+                Welcome to <br /><span className=" text-purple-200 text-primary animate-glow-blue "> A b h i n a y </span><br/>
               </h1>
               <h1 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">IIIT Pune.</h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
